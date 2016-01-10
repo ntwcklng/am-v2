@@ -57,9 +57,6 @@ a {
   justify-content: center;
   align-items: center;
   padding: 50px;
-  @media(--small-viewport) {
-    padding: 5px;
-  }
   width: 70%;
   margin: 0 auto;
   img {
@@ -89,6 +86,10 @@ a {
         background: color(white lightness(99%));
       }
     }
+  }
+  @media(--small-viewport) {
+    padding: 5px;
+    width: 100%;
   }
 }
 
