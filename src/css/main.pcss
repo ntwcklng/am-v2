@@ -1,0 +1,126 @@
+@use postcss-import;
+@use postcss-cssnext;
+@use postcss-nested;
+@use postcss-custom-media;
+@use postcss-simple-vars;
+@use cssnano;
+
+@import url(httttttps://fonts.googleapis.com/css?family=Lato);
+@import "config.pcss";
+.hidden {
+	display: none;
+}
+h1 {
+	text-align: center;
+	margin: 50px;
+}
+.footer {
+	margin: 100px;
+	text-align: center;
+	font-size: 14px;
+}
+.modal {
+
+	position: fixed;
+	width: 600px;
+	display: none;
+	max-width: 85%;
+	top: 50%;
+	left: 50%;
+	margin: 0 auto;
+	background: white;
+	padding: 20px;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 0px 99999px #00000060;
+	&-close {
+		float: right;
+		cursor: pointer;
+	}
+	&-ctx {
+		float: left;
+	}
+}
+a {
+	text-decoration: none;
+	color: $amColor;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	width: 70%;
+	margin: 0 auto;
+	img {
+		max-width: 100%;
+	}
+	ul {
+		list-style: none;
+		width: 90%;
+		margin: 40px;
+		padding: 0;
+		li {
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			background: white;
+			padding: 20px 90px;
+			margin-bottom: 10px;
+			box-shadow: 0px 1px 10px 0px #00000005;
+			@media (--small-viewport) {
+				padding: 10px;
+			}
+			&:hover {
+				box-shadow: 0px 1px 10px 0px #00000010;
+				background: color(white lightness(99%));
+			}
+		}
+	}
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.wrap {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: stretch;
+	flex-wrap: wrap;
+	a {
+		width:50%;
+		@media (--small-viewport) {
+			width: 100%;
+		}
+		@media (--large-viewport) {
+			width: 25%;
+		}
+		height: 400px;
+		transition: 100ms;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	.img-1 {
+		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/hummerh3/P1020843.JPG') 50% 50% no-repeat;
+		background-size: cover;
+	}
+	.img-2 {
+		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche991/P1020255.JPG') 50% 50% no-repeat;
+		background-size: cover;
+	}
+	.img-4 {
+		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche_gmodell_1/DSC00535.jpg') 50% 50% no-repeat;
+		background-size: cover;
+	}
+
+	.img-3 {
+		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/ralf/audi_tt_misanorot/DSC_0361.JPG') 50% 50% no-repeat;
+		background-size: cover;
+	}
+
+}

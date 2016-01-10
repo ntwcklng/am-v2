@@ -8,17 +8,21 @@ var cp = require("child_process");
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var browserSync = require("browser-sync");
+var rename = require('gulp-rename');
 
 var SOURCE = {
   coffee: './src/js/*.coffee',
   coffee_mainfile: 'main.coffee',
   js_build: 'dist/main.js',
   dist: 'dist',
-  css_mainfile: 'src/css/main.css'
+  css_build: './dist/main.css',
+  css_file: 'main.css',
+  css_mainfile: 'src/css/main.pcss'
 }
 
 gulp.task('css', function () {
   return gulp.src(SOURCE.css_mainfile)
+    .pipe(rename(SOURCE.css_file))
     .pipe(postcss([ postcssUse({ modules: '*'}) ]))
     .pipe(gulp.dest(SOURCE.dist));
 });
