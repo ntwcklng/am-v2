@@ -8,122 +8,128 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import "config.pcss";
 .hidden {
-	display: none;
+  display: none;
 }
 h1 {
-	text-align: center;
-	margin: 50px;
+  text-align: center;
+  margin: 50px;
 }
 .footer {
-	margin: 100px;
-	text-align: center;
-	font-size: 14px;
+  margin: 100px;
+  text-align: center;
+  font-size: 14px;
 }
 .modal {
-	z-index:10;
-	position: fixed;
-	width: 600px;
-	display: none;
-	max-width: 85%;
-	top: 50%;
-	left: 50%;
-	margin: 0 auto;
-	background: white;
-	padding: 30px;
-	transform: translate(-50%, -50%);
-	box-shadow: 0px 0px 0px 99999px #00000060;
-	&-close {
-		position: absolute;
-		top: 8px;
-		right: 10px;
-		cursor: pointer;
-	}
-	&-ctx {
-		float: left;
-	}
+  z-index:10;
+  position: fixed;
+  width: 600px;
+  display: none;
+  max-width: 85%;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 0px 99999px #00000060;
+  &-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+  }
+  &-ctx {
+    float: left;
+  }
 }
 a {
-	text-decoration: none;
-	color: $amColor;
+  text-decoration: none;
+  color: $amColor;
+}
+.pageWrapper {
+  padding: 40px;
 }
 .content {
-	z-index: 9;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 50px;
-	width: 70%;
-	margin: 0 auto;
-	img {
-		max-width: 100%;
-	}
-	ul {
-		list-style: none;
-		width: 90%;
-		margin: 40px;
-		padding: 0;
-		li {
-			cursor: pointer;
-			display: flex;
-			justify-content: space-between;
-			background: white;
-			padding: 20px 90px;
-			margin-bottom: 10px;
-			box-shadow: 0px 1px 10px 0px #00000005;
-			@media (--small-viewport) {
-				padding: 10px;
-			}
-			&:hover {
-				box-shadow: 0px 1px 10px 0px #00000010;
-				background: color(white lightness(99%));
-			}
-		}
-	}
+  letter-spacing: 2px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  @media(--small-viewport) {
+    padding: 5px;
+  }
+  width: 70%;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+  ul {
+    list-style: none;
+    width: 90%;
+    margin: 40px;
+    padding: 0;
+    li {
+      span {
+        margin-right: 25px;
+      }
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      padding: 20px 90px;
+      margin-bottom: 10px;
+      box-shadow: 0px 1px 10px 0px #00000005;
+      @media (--small-viewport) {
+        padding: 10px;
+      }
+      &:hover {
+        box-shadow: 0px 1px 10px 0px #00000010;
+        background: color(white lightness(99%));
+      }
+    }
+  }
 }
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-.wrap {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: stretch;
-	flex-wrap: wrap;
-	a {
-		width:50%;
-		@media (--small-viewport) {
-			width: 100%;
-		}
-		@media (--large-viewport) {
-			width: 25%;
-		}
-		height: 400px;
-		transition: 100ms;
-		&:hover {
-			opacity: .7;
-		}
-	}
-	.img-1 {
-		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/hummerh3/P1020843.JPG') 50% 50% no-repeat;
-		background-size: cover;
-	}
-	.img-2 {
-		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche991/P1020255.JPG') 50% 50% no-repeat;
-		background-size: cover;
-	}
-	.img-4 {
-		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche_gmodell_1/DSC00535.jpg') 50% 50% no-repeat;
-		background-size: cover;
-	}
 
-	.img-3 {
-		background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/ralf/audi_tt_misanorot/DSC_0361.JPG') 50% 50% no-repeat;
-		background-size: cover;
-	}
+.wrap {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  a {
+    width:50%;
+    @media (--small-viewport) {
+      width: 100%;
+    }
+    @media (--large-viewport) {
+      width: 25%;
+    }
+    height: 400px;
+    transition: 100ms;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .img-1 {
+    background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/hummerh3/P1020843.JPG') 50% 50% no-repeat;
+    background-size: cover;
+  }
+  .img-2 {
+    background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche991/P1020255.JPG') 50% 50% no-repeat;
+    background-size: cover;
+  }
+  .img-4 {
+    background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/marvin/porsche_gmodell_1/DSC00535.jpg') 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+  .img-3 {
+    background: url('https://glossbossimages.s3.eu-central-1.amazonaws.com/ralf/audi_tt_misanorot/DSC_0361.JPG') 50% 50% no-repeat;
+    background-size: cover;
+  }
 
 }
