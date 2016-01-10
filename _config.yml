@@ -13,3 +13,9 @@ include:
 
 # Build settings
 markdown: kramdown
+
+# Descriptions
+stufe1_desc: "Ideal für gut gepflegte Fahrzeuge und wenn dein Lack nur leichte Hologramme und Swirls hat!"
+stufe2_desc: "Standard-Paket für gehobene Ansprüche und wenn dein Lack viele und tiefe Kratzer hat!"
+stufe3_desc: "Dein Oldtimer wird auf einer Messe ausgestellt oder du möchtest ein Wertgutachten erstellen? Stufe 3 holt das maximum raus."
+serum_desc: "Die absolute Ausnahmeversiegelung! Beispiel gefällig? <a href='https://glossboss.de/produkttest/gtechniq-crystal-serum-test-anwendung-auftrag/' target='_blank'>Crystal Serum Produkttest auf glossboss.de</a> <p>Für den Auftrag ist einer der 3 Stufen erforderlich.</p>"

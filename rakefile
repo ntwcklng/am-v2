@@ -18,33 +18,11 @@ def execute(command)
 	system "#{command}"
 end
 
-desc "DEV"
-task :dev do
-	Rake::Task[:jsx].invoke
-	Rake::Task[:jekyll_serve].invoke
-end
-
 desc "Deploy all Files to S3 Bucket"
 task :deploy do
-	Rake::Task[:jsx].invoke
+	execute("gulp deploy")
 	Rake::Task[:git].invoke
-	Rake::Task[:jekyll_build].invoke
 	execute("s3cmd sync -M --acl-public --delete-removed --add-header='Cache-Control:max-age=168000' _site/ s3://#{CONFIG[:s3_bucket]} ")
-end
-
-desc "Transform JSX to JS"
-task :jsx do
-	execute("jsx -x jsx --no-cache-dir components/ build/")
-end
-
-desc "Builing Jekyll"
-task :jekyll_build do
-	execute("jekyll build")
-end
-
-desc "Serving Jekyll"
-task :jekyll_serve do
-	execute("jekyll serve")
 end
 
 desc "Add everything and push to git"
