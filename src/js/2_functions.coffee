@@ -1,7 +1,10 @@
 modalClose.on 'click', ->
-  modal.fadeOut '100'
+  modal.fadeOut fadeTime
+  overlay.hide 10
 
 list.on 'click', ->
   modalCtx = $(this).data 'desc'
   modalContent.html modalCtx
-  modal.fadeIn '100'
+
+  overlay.show 10 #disable the rest of the site
+  modal.fadeIn fadeTime
