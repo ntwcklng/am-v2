@@ -15,6 +15,7 @@
     "gulp": "^3.9.0",
     "gulp-coffee": "^2.3.1",
     "gulp-concat": "^2.6.0",
+    "gulp-include": "^2.1.0",
     "gulp-jekyll": "0.0.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",

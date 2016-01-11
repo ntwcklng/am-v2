@@ -7,4 +7,4 @@ modalClose = $ '.modal-close'
 body = $ 'body'
 overlay = $ '.overlay'
 
-fadeTime = 160
+fadeTime = 150

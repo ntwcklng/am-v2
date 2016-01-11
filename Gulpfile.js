@@ -1,17 +1,18 @@
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var jekyll = require('gulp-jekyll');
-var coffee = require('gulp-coffee');
-var concat = require('gulp-concat');
-var postcssUse = require('postcss-use');
-var cp = require("child_process");
-var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
-var browserSync = require("browser-sync");
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const jekyll = require('gulp-jekyll');
+const coffee = require('gulp-coffee');
+// const concat = require('gulp-concat');
+const postcssUse = require('postcss-use');
+const cp = require("child_process");
+const uglify = require('gulp-uglify');
+const watch = require('gulp-watch');
+const browserSync = require("browser-sync");
+const rename = require('gulp-rename');
+const include = require('gulp-include');
 
-var SOURCE = {
-  coffee: './src/js/*.coffee',
+const SOURCE = {
+  coffee: './src/js/main.coffee',
   coffee_mainfile: 'main.coffee',
   js_build: 'dist/main.js',
   dist: 'dist',
@@ -29,7 +30,8 @@ gulp.task('css', function () {
 
 gulp.task('js', function() {
   return gulp.src(SOURCE.coffee)
-  .pipe(concat(SOURCE.coffee_mainfile))
+  .pipe(include())
+  //.pipe(concat(SOURCE.coffee_mainfile))
   .pipe(coffee())
   .pipe(gulp.dest(SOURCE.dist))
 });

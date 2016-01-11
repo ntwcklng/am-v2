@@ -1,3 +1,5 @@
+#=include ./config.coffee
+
 modalClose.on 'click', ->
   modal.fadeOut fadeTime
   overlay.fadeOut fadeTime
