@@ -2,6 +2,7 @@
 @custom-media --small-viewport (max-width: 50em);
 @custom-media --large-viewport (min-width: 120em);
 $amColor: #51A7DB;
+$transition: 150ms;
 * {
   box-sizing: border-box;
 }
@@ -10,7 +11,7 @@ body {
   color: color(black lightness(40%));
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
-  transition: 120ms;
+  transition: $transition;
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
