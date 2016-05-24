@@ -68,7 +68,7 @@ gulp.task('dev', ['build-dev', 'watch'], function() {
   console.log('build done.');
 });
 
-gulp.task('watch', ['build-dev', 'browser-sync'], function() {
+gulp.task('default', ['build-dev', 'browser-sync'], function() {
   gulp.watch([
     './src/*/**'
   ], [
